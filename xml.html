@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const RestCountries = new XMLHttpRequest();
+
+RestCountries.open("GET", "https://restcountries.com/v2/all");
+RestCountries.send();
+
+RestCountries.responseType = "json";
+
+RestCountries.onload = function displayResult(){
+   const countries = RestCountries.response;
+console.log(countries);
+
+
+// REGION UNDER ASIA
+
+// var result = countries.filter((element)=>{
+// return element.region === "Asia"
+// })  
+//  console.log(result);
+
+
+
+
+//COUNTRY POPULATION LESS THAN 2LAKHS
+
+//  var result1 = countries.filter((element)=>{
+// return element.population < 2e5;
+// })  
+//  console.log(result1);
+
+
+
+
+//COUNTRY NAME CAPITAL FLAG BY FOR EACH
+
+// var result = countries.forEach((element) => {
+//     console.log (`Country - ${element.name}`)
+    
+//     console.log (`The capital of ${element.name} is ${element.capital}`)
+    
+// console.log (`Flag of ${element.name} is: ${element.flag}`)
+// console.log("")
+// });
+
+
+
+
+// USD CURRENCY COUNTRIES
+
+// for (let i=0; i<countries.length; i++){
+//     let currency = countries[i].currencies!==undefined;
+//     if(currency){
+//         let currencyObj = countries[i].currencies;
+//         let USD = currencyObj.USD!==undefined;
+//         if(USD){console.log("Currency USD Country",countries[i].name)}
+//     }
+// }
+
+
+
+// TOTAL POPULATION
+
+// var total = []
+// countries.forEach(element=>{
+    
+//     total.push(element.population)
+// })
+
+// //console.log(total)
+
+// let result = total.reduce((acc, cur)=>{
+//     return acc+cur;
+// })
+// console.log(`Total population of all countries is ${result}`)
+
+
+
+
+
+
+
+
+}
+  </script>
+</body>
+</html>
